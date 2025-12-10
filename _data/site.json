@@ -27,10 +27,10 @@
   "footer": {
     "info": [
       {
-        "text": "https://purl.im/ was created by <a href='https://adamdjbrett.com'>Adam DJ Brett</a> built with <a href='https://11ty.dev'>11ty</a>"
+        "text": "purl.im was created by <a href='https://adamdjbrett.com'>Adam DJ Brett</a> based on the genius of <a href='https://github.com/nhoizey'>@Nhoizey</a> and <a href='https://github.com/philhawksworth'>@philhawksworth</a>. Built with <a href='https://11ty.dev'> 🎈 11ty</a>"
       },
       {
-        "text": "CC BY-NC 4.0. Built with 🎈 11ty"
+        "text": "CC BY-NC 4.0."
       }
     ]
   }
