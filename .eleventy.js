@@ -32,9 +32,9 @@ module.exports = function(eleventyConfig) {
     return date.toISOString().split("T")[0];
   });
 
-  // Passthrough copy for favicons
-  eleventyConfig.addPassthroughCopy({ "favicon.ico": "favicon.ico" });
-  eleventyConfig.addPassthroughCopy({ "favicon.png": "favicon.png" });
+  // Passthrough copy for favicons now stored under /public
+  eleventyConfig.addPassthroughCopy({ "public/favicon.ico": "favicon.ico" });
+  eleventyConfig.addPassthroughCopy({ "public/favicon.png": "favicon.png" });
 
   // Passthrough copy for simple.min.css
   eleventyConfig.addPassthroughCopy({ "assets/css/simple.min.css": "assets/css/simple.min.css" });
@@ -42,9 +42,11 @@ module.exports = function(eleventyConfig) {
 	// Ensure xmit configuration ships with the build output
 	eleventyConfig.addPassthroughCopy("xmit.json");
 
-  // Collection: all short links
+  // Collection: gather shortlinks defined in Markdown
   eleventyConfig.addCollection("shortlinks", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("./urls/*.md");
+    return collectionApi.getFilteredByGlob([
+      "./content/urls/*.md",
+    ]);
   });
 
   // Generate SVG QR inside each shortlink folder
@@ -64,10 +66,10 @@ module.exports = function(eleventyConfig) {
 
   return {
     dir: {
-      input: ".",
+      input: "content",
       output: "_site",
-      includes: "_includes",
-      data: "_data"
+      includes: "../_includes",
+      data: "../_data"
     },
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
