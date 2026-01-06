@@ -18,7 +18,7 @@ By the powers of [1y](https://github.com/nhoizey/1y) and [findth.at](https://git
 ## How to use
 1. Have an invite
 2. go to [Pages CMS](https://pagescms.org/)
-3. login with your github account
+3. login with your email account
 4. Connect Pages CMS with the repository for the first time only
 5. go to ```shortlinks```
 6. Add an entry
